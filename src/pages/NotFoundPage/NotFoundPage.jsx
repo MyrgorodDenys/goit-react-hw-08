@@ -5,7 +5,7 @@ const NotFoundPage = () => {
   return (
     <div className={css.notFound}>
       <NavLink to="/" className={css.notFoundLink}>
-        Oops! Page not found! Click here to go home.
+        Oops! Page not found! Clicke here to go home.
       </NavLink>
     </div>
   );

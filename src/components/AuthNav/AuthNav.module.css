@@ -14,3 +14,19 @@
 .btn:nth-child(1) {
   margin-right: 12px;
 }
+/* .container {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  color: rgb(31, 27, 27);
+  padding: 4px;
+  background-color: #d3d3d3ff;
+}
+
+.btn:nth-child(1) {
+  margin-right: 12px;
+} */

@@ -11,10 +11,30 @@
 }
 
 .link:hover {
+  color: #ffffff;
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: 1px dotted #ffffff;
+}
+/* .list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.link {
+  color: inherit;
+  font-size: 18px;
+  transition: color ease-in-out 0.3s;
+}
+
+.link:hover {
   color: #fff;
 }
 
 .active {
   font-weight: 700;
   border-bottom: 1px dotted #fff;
-}
+} */

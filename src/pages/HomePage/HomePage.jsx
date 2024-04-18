@@ -3,7 +3,9 @@ import css from "./HomePage.module.css";
 const HomePage = () => {
   return (
     <>
-      <h1 className={css.title}>Welcome to Phonebook page</h1>
+      <h1 className={css.title}>
+        Welcome to Phonebook! Connect and Navigate Your World!
+      </h1>
     </>
   );
 };
