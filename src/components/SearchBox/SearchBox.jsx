@@ -1,38 +1,28 @@
-import css from "./SearchBox.module.css";
-import { IoCloseOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { changeFilter } from "../../redux/filtersSlice";
-import { selectNameFilter } from "../../redux/selectors";
-import { initialStateFilter } from "../../redux/constants";
+import { changeFilter } from "../../redux/filters/slice.js";
+import { selectNameFilter } from "../../redux/filters/selectors.js";
+import css from "./SearchBox.module.css";
 
 const SearchBox = () => {
-  const searchValue = useSelector(selectNameFilter);
   const dispatch = useDispatch();
+  const searchStr = useSelector(selectNameFilter);
 
-  const handelInputSearch = (event) => {
-    dispatch(changeFilter(event.target.value));
-  };
-
-  const cleanInput = () => {
-    dispatch(changeFilter(initialStateFilter.name));
+  const handelInput = (e) => {
+    dispatch(changeFilter(e.target.value));
   };
 
   return (
-    <div className={css.container}>
-      <p className={css.inputText}>Find contacts by name</p>
-      <div className={css.container}>
+    <div className={css.searchBox}>
+      <label className={css.label}>
+        Find contacts by name
         <input
-          className={css.formInput}
+          className={css.field}
           type="text"
-          value={searchValue}
-          onChange={handelInputSearch}
+          name="name"
+          value={searchStr}
+          onChange={handelInput}
         />
-        <IoCloseOutline
-          className={css.iconClean}
-          size="20"
-          onClick={cleanInput}
-        />
-      </div>
+      </label>
     </div>
   );
 };
